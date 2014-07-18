@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "1.9.3"
+ruby "2.1.2"
 
 gem 'rails', '3.2.11'
 
@@ -14,6 +14,7 @@ gem 'dynamic_form', '1.1.4'
 gem 'elo', '0.1.0'
 gem 'trueskill', :git => 'git://github.com/saulabs/trueskill.git', :require => "saulabs/trueskill"
 gem 'params_cleaner', '0.4.2'
+gem 'quiet_assets'
 
 # Gems used only for assets and not required
 # in production environments by default.
