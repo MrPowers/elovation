@@ -1,6 +1,5 @@
 class GamesController < ApplicationController
-  include ParamsCleaner
-
+include ParamsCleaner
   allowed_params :game => [ :name,
                             :rating_type,
                             :min_number_of_teams,
@@ -12,7 +11,7 @@ class GamesController < ApplicationController
   before_filter :_find_game, :only => [:destroy, :edit, :show, :update]
 
   def create
-    @game = Game.new(clean_params[:game])
+    @game = Game.new(params[:game])
 
     if @game.save
       redirect_to game_path(@game)
@@ -46,7 +45,7 @@ class GamesController < ApplicationController
   end
 
   def update
-    if @game.update_attributes(clean_params[:game])
+    if @game.update_attributes(params[:game])
       redirect_to game_path(@game)
     else
       render :edit

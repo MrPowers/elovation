@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "2.1.2"
+ruby "1.9.3"
 
 gem 'rails', '3.2.11'
 
@@ -33,4 +33,7 @@ group :test, :development do
   gem 'heroku', '2.31.4'
   gem 'timecop', '0.5.2'
   gem 'taps', '0.3.24'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'meta_request'
 end
